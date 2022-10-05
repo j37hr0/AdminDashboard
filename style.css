@@ -1,29 +1,75 @@
+/* color1: F8EDE3
+color2: DFD3C3
+color3: D0B8A8
+color4: 7D6E83 */
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 0.5fr 4fr;
-    gap: 10px
+    grid-template-rows: 100px 4fr 100px;
+    background-color: #DFD3C3;
 }
 
 .header {
+    background-color: #F8EDE3;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column: span 2;
+    align-items: end;
+    align-content: end;
+
+}
+
+.headerbuttons {
+    display: grid;
+    place-self: end;
+}
+
+.header button {
+    background-color: #7D6E83;
+    height: 50px;
+    width: 70px;
+    border-radius: 3px;
+    color: white;
+}
+
+.header textarea {
+    height: 25px;
+    width: 200px;
+    resize: none;
 }
 
 .sidebar {
+    background-color: #7D6E83;
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 50px;
+    grid-auto-rows: 70px;
     grid-column: span 1;
-    grid-row: span 2;
-    gap: 30px;
+    grid-row: span 1;
+    gap: 20px;
+    color: white;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 25px;
+}
+
+.sidebar img {
+    padding-top: 3px;
+    height: 40px;
+    width: 40px;
 }
 
 .content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    background-color: #DFD3C3;
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .projects {
@@ -34,5 +80,40 @@
 }
 
 .box {
-    border: solid black 1px;
+    height: 290px;
+
+    background-color: white;
+    gap: 15px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border-left: solid 5px gold;
+}
+
+.announcements .box {
+    display: grid;
+    border: none;
+    height: 250px;
+}
+
+.trending {
+    border: solid black 2px;
+    background-color: white;
+    gap: 15px;
+    padding-left: 10px;
+    border-radius: 4px;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    overflow: auto;
+}
+
+.footer {
+    display: grid;
+    place-content: center;
+    grid-column: span 2;
+    background-color: #F8EDE3;
+}
+
+.announcements {
+    overflow: auto;
+    height: 600px;
 }
